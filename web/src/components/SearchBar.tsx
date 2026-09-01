@@ -8,6 +8,7 @@ interface SearchBarProps {
 const SearchBar = ({ value, onChange }: SearchBarProps) => {
   return (
     <div className="searchbar-container">
+      <span className="searchbar-icon">🔍</span>
       <input
         className="searchbar-input"
         type="text"

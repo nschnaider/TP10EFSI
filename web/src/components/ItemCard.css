@@ -1,60 +1,106 @@
 .card {
-  background-color: #1a2740;
-  border-radius: 12px;
+  background: linear-gradient(145deg, #1a2740, #141e30);
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: transform 0.2s;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
 .card-flag {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
+  height: 160px;
+  object-fit: contain;
+  background: radial-gradient(circle, #1e3a5f 0%, #0e1726 100%);
+  padding: 16px;
 }
 
 .card-info {
-  padding: 12px;
+  padding: 12px 14px 8px;
   flex: 1;
+}
+
+.card-number {
+  color: #4a6080;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
 .card-name {
   color: #ffffff;
-  font-size: 15px;
-  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  text-transform: capitalize;
+}
+
+.card-types {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.card-type-badge {
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #ffffff;
 }
 
 .card-detail {
-  color: #8b949e;
+  color: #cbd5e1;
   font-size: 13px;
   margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
 }
 
 .card-btn {
-  margin: 0 12px 12px;
-  padding: 8px;
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.1);
-  background: transparent;
+  margin: 0 14px 14px;
+  padding: 9px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
   color: #8b949e;
   cursor: pointer;
   font-size: 13px;
   font-weight: 600;
   transition: all 0.2s;
+  letter-spacing: 0.3px;
 }
 
 .card-btn:hover {
   border-color: #e1306c;
   color: #e1306c;
+  background: rgba(225,48,108,0.08);
 }
 
 .card-btn-active {
-  background-color: #e1306c;
-  border-color: #e1306c;
+  background: linear-gradient(135deg, #e1306c, #c0185a);
+  border-color: transparent;
   color: #ffffff;
+}
+
+.card-btn-active:hover {
+  background: linear-gradient(135deg, #c0185a, #a01248);
+  color: #ffffff;
+}
+.card-detail strong {
+  color: #ffffff;
+  font-weight: 600;
 }
