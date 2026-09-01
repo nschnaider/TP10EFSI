@@ -27,7 +27,9 @@ const ItemCard = ({ country: pokemon, isFavorite, onToggleFavorite }: ItemCardPr
       />
       <div className="card-info">
         <p className="card-number">#{String(pokemon.id).padStart(3, "0")}</p>
-        <h3 className="card-name">{pokemon.name}</h3>
+        <h3 className="card-name">
+  {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+</h3>
 
         {/* Badges de tipo con color */}
         <div className="card-types">
